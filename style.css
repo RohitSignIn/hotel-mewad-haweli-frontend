@@ -21,7 +21,7 @@ body,
 .room_con > p {
   margin: 1rem 2rem;
   font-size: 1.3rem;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #eee;
 }
 
 .room {
@@ -37,10 +37,10 @@ body,
   position: relative;
   min-width: 150px;
   overflow: hidden;
-  border: 1px solid var(--color1);
+  /* border: 1px solid var(--color1); */
   padding: 0.8rem 1.2rem;
   border-radius: 0.4rem;
-  background-color: white;
+  background-color: rgb(240, 240, 240);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,3 +122,54 @@ p:nth-child(3):hover {
   -ms-overflow-style: none;
   scrollbar-width: none; /* Firefox */
 }
+
+/* FORM SYTLE START  */
+
+.form_con {
+  margin: 2rem 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 70%;
+}
+
+.form_con > div {
+  width: 100%;
+}
+
+.form_con label {
+  width: 100%;
+  color: rgb(62, 62, 62);
+  display: block;
+}
+.form_con input {
+  width: 100%;
+  padding: 0.4rem 0.4rem;
+  font-size: 1rem;
+  outline: none;
+  margin-top: 0.2rem;
+  border: none;
+  background-color: var(--color2);
+  border-bottom: 2px solid #eee;
+  transition: 0.3s ease-in-out;
+}
+
+.form_con input:focus {
+  border-bottom: 2px solid var(--color1);
+  background-color: white;
+}
+
+.form_con button {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: rgb(14, 77, 14);
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* FORM STYLE END  */

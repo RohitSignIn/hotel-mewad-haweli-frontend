@@ -11,17 +11,44 @@
 
 <body>
 
-    <div class="room_con">
-        <p>Deluxe Rooms (Garden View), Available 9</p>
-        <div id="deluxRoom" class="room scrollbar-hidden">
+    <div>
+
+        <!-- Rooms Booking date Cards START -->
+        <div class="room_con">
+            <p>Deluxe Rooms (Garden View), Available 9</p>
+            <div id="deluxRoom" class="room scrollbar-hidden">
+            </div>
         </div>
+
+        <div class="room_con">
+            <p>Family Rooms (Garden View), Available 2</p>
+            <div id="familyRoom" class="room scrollbar-hidden">
+            </div>
+        </div>
+        <!-- Rooms Booking date Cards END -->
+
+
+        <!-- FORM START -->
+        <div class="form_con">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter email">
+            </div>
+            <div>
+                <label for="mobile">Mobile</label>
+                <input type="tel" name="mobile" id="mobile" placeholder="Enter Mobile no">
+            </div>
+            <button>Book Now</button>
+        </div>
+        <!-- FORM END -->
+
     </div>
 
-    <div class="room_con">
-        <p>Family Rooms (Garden View), Available 2</p>
-        <div id="familyRoom" class="room scrollbar-hidden">
-        </div>
-    </div>
+
 
 
     <script src="./script.js"></script>
