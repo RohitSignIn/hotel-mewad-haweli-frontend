@@ -12,6 +12,11 @@ body,
 :root {
   --color1: rgb(53, 203, 11);
   --color2: rgb(198, 198, 198);
+  --color3: rgb(14, 77, 14);
+}
+
+#booking_con {
+  position: relative;
 }
 
 .room_con {
@@ -63,11 +68,12 @@ body,
   background-color: var(--color2);
   border-radius: 0.4rem;
   margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .date_card p:nth-child(1):hover {
-  background-color: var(--color1);
+  background-color: var(--color3);
+  color: #fff;
 }
 
 .date_card p:nth-child(2),
@@ -80,12 +86,13 @@ p:nth-child(3) {
   background-color: var(--color2);
   border-radius: 0.4rem;
   margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .date_card p:nth-child(2):hover,
 p:nth-child(3):hover {
-  background-color: var(--color1);
+  background-color: var(--color3);
+  color: #fff;
 }
 
 .input_date_con {
@@ -159,17 +166,35 @@ p:nth-child(3):hover {
 }
 
 .form_con input:focus {
-  border-bottom: 2px solid var(--color1);
+  border-bottom: 2px solid var(--color3);
   background-color: white;
 }
 
 .form_con button {
   padding: 0.6rem 1rem;
   border: none;
-  background-color: rgb(14, 77, 14);
+  background-color: var(--color3);
   font-size: 1rem;
   color: #fff;
   border-radius: 1rem;
   cursor: pointer;
 }
 /* FORM STYLE END  */
+
+/* AMOUNT DISPLAY START  */
+
+.amount_disp {
+  position: sticky;
+  left: 0px;
+  bottom: 1rem;
+}
+
+.amount_disp > p {
+  margin-left: 1rem;
+  width: max-content;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  background-color: var(--color3);
+}
+/* AMOUNT DISPLAY END  */
