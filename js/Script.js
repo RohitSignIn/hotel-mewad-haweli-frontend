@@ -19,6 +19,7 @@ function HandleBookDateClick(e, roomType) {
     e.target.nextSibling.classList.remove("selectedRoom");
     e.target.nextSibling.nextSibling.classList.remove("selectedRoom");
   }
+  console.log(bookedRooms);
 }
 
 function HandleFeatureOneClick(e, roomType) {

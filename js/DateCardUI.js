@@ -17,39 +17,65 @@ datesArray.forEach((date) => {
   );
   const formattedDate = `${day} ${month}`;
   // Format date - END
+  {
+    // DELUXE ROOM - START ---------------------
+    // Setting up Room Card - START
+    const deluxRoomNode = document.createElement("div");
+    const dateCard = document.createElement("p");
+    const featOne = document.createElement("p");
+    const featTwo = document.createElement("p");
 
-  // DELUXE ROOM - START
-  // Setting up Room Card - START
-  const deluxRoomNode = document.createElement("div");
-  const dateCard = document.createElement("p");
-  const featOne = document.createElement("p");
-  const featTwo = document.createElement("p");
+    deluxRoomNode.setAttribute("class", "date_card");
+    dateCard.textContent = formattedDate;
+    featOne.textContent = "Morning";
+    featTwo.textContent = "Evening";
 
-  deluxRoomNode.setAttribute("class", "date_card");
-  dateCard.textContent = formattedDate;
-  featOne.textContent = "Morning";
-  featTwo.textContent = "Evening";
+    dateCard.addEventListener("click", (e) => HandleBookDateClick(e, "deluxe"));
+    featOne.addEventListener("click", (e) =>
+      HandleFeatureOneClick(e, "deluxe")
+    );
+    featTwo.addEventListener("click", (e) =>
+      HandleFeatureTwoClick(e, "deluxe")
+    );
 
-  dateCard.addEventListener("click", (e) => HandleBookDateClick(e, "deluxe"));
-  featOne.addEventListener("click", (e) => HandleFeatureOneClick(e, "deluxe"));
-  featTwo.addEventListener("click", (e) => HandleFeatureTwoClick(e, "deluxe"));
+    deluxRoomNode.appendChild(dateCard);
+    deluxRoomNode.appendChild(featOne);
+    deluxRoomNode.appendChild(featTwo);
 
-  deluxRoomNode.appendChild(dateCard);
-  deluxRoomNode.appendChild(featOne);
-  deluxRoomNode.appendChild(featTwo);
+    // Setting up Room Card - END
 
-  // Setting up Room Card - END
+    deluxRoom.append(deluxRoomNode);
+    // DELUXE ROOM - END ---------------------
+  }
 
-  deluxRoom.append(deluxRoomNode);
-  // DELUXE ROOM - END
+  {
+    // Family ROOM - START ------------------
+    // Setting up Room Card - START
+    const familyRoomNode = document.createElement("div");
+    const dateCard = document.createElement("p");
+    const featOne = document.createElement("p");
+    const featTwo = document.createElement("p");
 
-  // Family ROOM - START
-  // Setting up Room Card - START
-  const familyRoomNode = document.createElement("div");
-  familyRoomNode.setAttribute("class", "date_card");
-  familyRoomNode.innerHTML = `<p>${formattedDate}</p> <p>Morning</p> <p>Evening</p>`;
-  // Setting up Room Card - END
+    familyRoomNode.setAttribute("class", "date_card");
+    dateCard.textContent = formattedDate;
+    featOne.textContent = "Morning";
+    featTwo.textContent = "Evening";
 
-  familyRoom.append(familyRoomNode);
-  // Family ROOM - END
+    dateCard.addEventListener("click", (e) => HandleBookDateClick(e, "family"));
+    featOne.addEventListener("click", (e) =>
+      HandleFeatureOneClick(e, "family")
+    );
+    featTwo.addEventListener("click", (e) =>
+      HandleFeatureTwoClick(e, "family")
+    );
+
+    familyRoomNode.appendChild(dateCard);
+    familyRoomNode.appendChild(featOne);
+    familyRoomNode.appendChild(featTwo);
+
+    // Setting up Room Card - END
+
+    familyRoom.append(familyRoomNode);
+    // Family ROOM - END -------------------
+  }
 });
