@@ -21,8 +21,23 @@ datesArray.forEach((date) => {
   // DELUXE ROOM - START
   // Setting up Room Card - START
   const deluxRoomNode = document.createElement("div");
+  const dateCard = document.createElement("p");
+  const featOne = document.createElement("p");
+  const featTwo = document.createElement("p");
+
   deluxRoomNode.setAttribute("class", "date_card");
-  deluxRoomNode.innerHTML = `<p>${formattedDate}</p> <p>Morning</p> <p>Evening</p>`;
+  dateCard.textContent = formattedDate;
+  featOne.textContent = "Morning";
+  featTwo.textContent = "Evening";
+
+  dateCard.addEventListener("click", (e) => HandleBookDateClick(e, "deluxe"));
+  featOne.addEventListener("click", (e) => HandleFeatureOneClick(e, "deluxe"));
+  featTwo.addEventListener("click", (e) => HandleFeatureTwoClick(e, "deluxe"));
+
+  deluxRoomNode.appendChild(dateCard);
+  deluxRoomNode.appendChild(featOne);
+  deluxRoomNode.appendChild(featTwo);
+
   // Setting up Room Card - END
 
   deluxRoom.append(deluxRoomNode);

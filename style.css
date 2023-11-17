@@ -198,3 +198,9 @@ p:nth-child(3):hover {
   background-color: var(--color3);
 }
 /* AMOUNT DISPLAY END  */
+
+/* Room Selected Class */
+.selectedRoom {
+  background-color: var(--color3) !important;
+  color: #fff;
+}
